@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#div1{
+				width: 400px;
+				height: 400px;
+				margin: 0 auto;
+				/*margin: 300px auto 0;*/
+			}
+			/*input{
+				text-align: center;
+				margin: 10px 0;
+			}*/
+		</style>
+	</head>
+	<body>
+		<div id="div1">
+			<p id="p1">我们的程序简洁，优雅，完整的算法描述。
+您可以运行程序来研究算法的属性。
+您可以立即将算法用于应用程序中。</p>
+	<input type="button" name="大" id="大" value="大" onclick="click1();"/>
+	<input type="button" name="中" id="中" value="中" onclick="click2();"/>
+	<input type="button" name="小" id="小" value="小" onclick="click3();"/>
+		</div>
+	<script type="text/javascript">
+		function click1(){
+			var p1 = document.getElementById("p1");
+			p1.style.fontSize="18px";
+		}
+		function click2(){
+			var p1 = document.getElementById("p1");
+			p1.style.fontSize="14px";
+		}
+		function click3(){
+			var p1 = document.getElementById("p1");
+			p1.style.fontSize="12px";
+		}
+	</script>
+	</body>
+</html>

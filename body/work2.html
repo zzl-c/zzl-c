@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#outer{
+				width: 50%;
+				height: 50%;
+				margin: 200px auto 0;
+				text-align: center;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div id="outer">
+			<div id="txt">
+			<h5>JavaScript为网页添加动态效果并实现与用户交互的功能。</h5>
+			<p>111111111111111111111111111111111</p>
+			<p>222222222222222222222222222222222</p>
+			<p>333333333333333333333333333333333</p>
+		</div>
+		<form>
+			<!--当点击相应按钮，执行相应操作，为按钮添加相应事件-->
+			<input type="button" value="改变颜色" onClick="changecolor()">
+			<input type="button" value="改变宽高" onClick="changewidth()">
+			<input type="button" value="隐藏内容" onClick="hidetext()">
+			<input type="button" value="显示内容" onClick="showtext()">
+			<input type="button" value="取消设置" onClick="queXiao()">
+		</form>
+		<script type="text/javascript">
+			function changecolor(){
+				var ps = document.getElementsByTagName("p");
+				var colors = ["red","green","blue"]
+				for (var i = 0;i < ps.length;i++) {
+					ps[i].style.color=colors[i]; 
+				}
+			}
+			function changewidth(){
+				var ps = document.getElementsByTagName("p");
+				for (var i = 0;i < ps.length;i++) {
+					ps[i].style.lineHeight="40px"; 
+					ps[i].style.letterSpacing="2px"; 
+				}
+			}
+			function hidetext(){
+				var ps = document.getElementsByTagName("p");
+				for (var i = 0;i < ps.length;i++) {
+					ps[i].style.marginLeft="-10000px";
+				}
+			}
+			function showtext(){
+				var ps = document.getElementsByTagName("p");
+				for (var i = 0;i < ps.length;i++) {
+					ps[i].style.marginLeft="0px";
+				}
+			}
+			function queXiao(){
+				var ps = document.getElementsByTagName("p");
+				for (var i = 0;i < ps.length;i++) {
+					ps[i].style.color="black";
+					ps[i].style.lineHeight="21px";
+					ps[i].style.letterSpacing="0px";
+				}
+			}
+		</script>
+		</div>
+	</body>
+
+</html>
